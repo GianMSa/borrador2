@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body
+    style="background: linear-gradient(to bottom right, rgb(26, 26, 211), #DC143C);; display: flex; justify-content: center; align-items: center;height: 100vh">
+    <style>
+        /*         .contenedor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            
+        }  */
+        #titulo {
+            text-align: center;
+            margin: 10px;
+            margin-top: 0;
+            color: white;
+            font-weight: bold;
+
+        }
+
+        #borde {
+            border: 1px solid rgb(105, 95, 95);
+            padding: 60px;
+            margin-top: 0;
+            background-color: #283747;
+        }
+
+        #titulo_b {
+            margin-left: 20px;
+            color: white;
+
+        }
+
+        #correo {
+            margin-right: 10px;
+            margin-left: 5px;
+            border-radius: 0px;
+            border: 2px solid white;
+            background-color: #283747;
+            color: aliceblue;
+            font-size: 20px;
+
+        }
+
+        #correo:focus {
+            outline: 4px solid #da6355
+        }
+
+        #correo::placeholder {
+            font-size: 18px;
+        }
+
+        #correo:focus::placeholder {
+            color: transparent;
+        }
+
+        #contrasena {
+            margin-right: 10px;
+            margin-left: 5px;
+            border-radius: 0px;
+            border: 2px solid white;
+            background-color: #283747;
+            color: aliceblue;
+            font-size: 20px;
+        }
+
+        #contrasena:focus {
+            outline: 4px solid #da6355
+        }
+
+        #contrasena::placeholder {
+            font-size: 18px;
+            justify-content: center;
+        }
+
+        #contrasena:focus::placeholder {
+            color: transparent;
+        }
+
+        #boton_p {
+            justify-content: center;
+        }
+
+        #d_boton_i {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #boton_i {
+            font-weight: bold;
+            color: white;
+            border-color: 2px solid #da6355;
+            border-radius: 0px;
+            padding: 12px;
+        }
+
+        #boton_i:hover {
+            background-color: #da6355;
+            border-color: 2px solid #da6355;
+            outline-color: #da6355;
+
+        }
+
+        #recuperar {
+            text-align: center;
+
+        }
+
+        #link_r {
+            color: white;
+        }
+
+        #link_r:hover {
+            color: #aab7b8;
+        }
+    </style>
+    <br>
+    <div class="contenedor">
+        <form action="" onsubmit="return ValidarEmail()">
+            <fieldset id="borde">
+                <legend id="titulo">Iniciar Sesión</legend><br>
+                <br>
+                <!--Input para correo -->
+                <div>
+                    <span id="titulo_b" for="">Correo Electronico</span> <br>
+                    <input id="correo" class="form-control" placeholder="Ingrese su correo" type="email" required>
+
+                    <script>
+                        function ValidarEmail() {
+                             correo = document.getElementById("correo").value;
+                            if (!ValidarEmail) return alert(`El valor "${ValidarEmail}" ingresado, No es una cadena de texto`);
+
+                            if (typeof correo !== "string") return alert(`El valor "${email}" ingresado, No es una cadena de texto`);
+
+                            let expReg = /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(correo);
+
+                            return (expReg)
+                                ? alert(`"${correo}", es un email válido`)
+                                : alert(`"${correo}", no es un email válido`)
+                            }
+                            document.getElementById('correo').addEventListener('submit',
+                            ValidarEmail);
+
+                    </script>
+                </div>
+                <br>
+                <!--Input para contraseña-->
+                <span id="titulo_b" for="">Contraseña</span> <br>
+                <input id="contrasena" class="form-control" placeholder="Ingrese su contraseña" type="password"
+                    required>
+                <br>
+                <!--Botones-->
+                <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups" id="boton_p">
+
+                    <div class="btn-group me-2" role="group" id="d_boton_i">
+
+                        <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-outline-success"
+                            type="button">Registrar</button>
+
+                    </div>
+
+                    <div class="btn-group me-2" role="group" id="d_boton_i">
+
+                        <button id="boton_i" type="submit" class="btn btn-outline-success" onclick="ValidarEmail()" >Ingresar</button>
+
+                    </div>
+
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Registro Usuario</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                                <button type="button" class="btn btn-primary">Registrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Link para recuperar contraseña-->
+                <div id="recuperar">
+                    <p><a id="link_r" href="">Recuperar contraseña</a></p>
+                </div>
+
+            </fieldset>
+
+        </form>
+    </div>
+</body>
+
+</html>
