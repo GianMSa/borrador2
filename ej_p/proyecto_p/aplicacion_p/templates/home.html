@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css\home.css' %}">
+</head>
+
+<body style="background: linear-gradient(to bottom right, rgb(26, 26, 211), #DC143C);">
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <header id="h" style="padding: 10px;">
+        <div id="b_home">
+            <button class='bx bxs-home bx-md' style="color: #fff; background-color: transparent; border-color: transparent;"></button>
+        </div>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn bx bxs-user-rectangle"></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#home">Información 1</a>
+                <a href="#about">Informacion 2</a>
+                <a href="#contact" id="c_s">
+                    <i class='bx bx-log-out bx-sm' style="margin-right: 12px;">
+                        </i>Cerrar Sesión</a>
+            </div>
+    </header> <br>
+    <h1 id="titulo">Bienvenido [nombre usuario]</h1>
+    <div class="center-content">
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group" id="">
+                <button id="b_usuario" class="btn btn-primary">
+                    <p id="t_b_usuario"> Registrar Persona</p>
+                    <hr>
+                    <!-- <p id="isplay-time"> -->
+                        <script>
+                            function myFunc() {
+                                var now = new Date();
+                                var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+                                document.getElementById('isplay-time').innerHTML = time;
+                            }
+                            setInterval(myFunc, 1000);
+                        </script>
+                    </p>
+                </button>
+            </div>
+            <div class="btn-group me-2" role="group" aria-label="First group">
+                <button id="b_asis" class="btn btn-primary">
+                    <p id="t_b_asis"> Registrar Asistencia</p>
+                    <hr>
+                    <!-- <p id="display-tim"> -->
+                        <script>
+                            function myFunc() {
+                                var now = new Date();
+                                var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+                                document.getElementById('display-tim').innerHTML = time;
+                            }
+                            setInterval(myFunc, 1000);
+                        </script>
+                    </p>
+                </button>
+            </div>
+
+            <div class="btn-group me-2" role="group" aria-label="First group">
+                <button id="b_ficha" class="btn btn-primary">
+                    <p id="t_b_ficha">Fichas</p>
+                    <hr>
+                    <!-- <p id="display-time"> -->
+                        <script>
+                            function myFunc() {
+                                var now = new Date();
+                                var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+                                document.getElementById('display-time').innerHTML = time;
+                            }
+                            setInterval(myFunc, 1000);
+                        </script>
+                    </p>
+                </button>
+            </div>
+
+            <div class="btn-group me-2" role="group" aria-label="First group">
+                <button id="b_servi" class="btn btn-primary">
+                    <p id="t_b_servi">Servicios</p>
+                    <hr>
+                    <!-- <p id="display-tim"> -->
+                        <script>
+                            function myFunc() {
+                                var now = new Date();
+                                var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+                                document.getElementById('display-tim').innerHTML = time;
+                            }
+                            setInterval(myFunc, 1000);
+                        </script>
+                    </p>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div style="background-color:transparent;">
+        <br>
+        <footer style="padding: 10px;">
+            <button class="btn btn-primary" id="b_reporte" type="button">Reportes</button>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    background-color: #da6355;
+}
+#titulo{
+    color: white;
+    text-align: center;
+}
+
+#b_home{
+    float: left;
+    position: relative;
+    padding: 8px;
+    
+
+}
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    font-size:50px
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: transparent;
+}
+
+.dropdown {
+    float: right;
+    position: relative;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    right: 0;
+    z-index: 1;
+
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+/**/
+#b_usuario,
+#b_asis,
+#b_ficha,
+#b_servi {
+    width: 250px;
+    height: 150px;
+    font-size: 20px;
+    transition: 0.08s ease-in;
+    -o-transition: 0.08s ease-in;
+    -ms-transition: 0.08s ease-in;
+    -moz-transition: 0.08s ease-in;
+    -webkit-transition: 0.08s ease-in;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#b_usuario,
+#b_ficha {
+    border: 4px solid #283747;
+    color: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
+    
+
+}
+#b_asis,
+#b_servi {
+    border: 4px solid #da6355;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+
+}
+/*Titulo botones*/
+#t_b_usuario,#t_b_asis,#t_b_ficha,#t_b_servi{
+    font-weight: bolder;
+    font-size: 23px;
+}
+
+/*fin titulo botones*/
+.center-content {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-grow: 1;
+    background-color: transparent;
+    
+}
+
+.btn-toolbar {
+    justify-content: space-around;
+    margin: 0;
+}
+
+/* Sección efectos botones*/
+
+#b_usuario:hover {
+    color: whitesmoke;
+    box-shadow: 0px 5px 10px -4px rgba(255, 255, 255, 0.654);
+    transform: translateY(-15px);
+
+}
+
+#b_usuario:after {
+    display: block;
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;       
+    box-shadow: 0px 5px 10px -4px rgba(222, 6, 6, 0.1);
+    top: 0;
+    left: 0;
+    transition: box-shadow 0.3s ease-in-out; /
+}
+
+
+
+/*------*/
+#b_ficha:hover {
+    color: whitesmoke;
+    box-shadow: 0px 5px 10px -4px rgba(255, 255, 255, 0.654);
+    transform: translateY(-15px);
+}
+
+#b_ficha:after {
+    content: "";
+    display: block;
+    position: absolute;
+    
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;       
+    box-shadow: 0px 5px 10px -4px rgba(222, 6, 6, 0.1);
+    top: 0;
+    left: 0;
+    transition: box-shadow 0.3s ease-in-out; 
+
+}
+
+#b_ficha:hover:after {
+    top: 0;
+
+}
+
+/*----*/
+#b_asis:hover {
+    color: whitesmoke;
+    box-shadow: 0px 5px 10px -4px rgba(255, 255, 255, 0.654);
+    transform: translateY(-15px);
+}
+
+#b_asis:after {
+    content: "";
+    display: block;
+    position: absolute;
+    
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;       
+    box-shadow: 0px 5px 10px -4px rgba(222, 6, 6, 0.1);
+    top: 0;
+    left: 0;
+    transition: box-shadow 0.3s ease-in-out; 
+}
+
+#b_asis:hover:before {
+    bottom: 0;
+}
+
+/*------*/
+#b_servi:hover {
+    color: whitesmoke;
+    box-shadow: 0px 5px 10px -4px rgba(255, 255, 255, 0.654);
+    transform: translateY(-10px);
+}
+
+#b_servi:before {
+    display: block;
+    position: absolute;
+    
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;       
+    box-shadow: 0px 5px 10px -4px rgba(222, 6, 6, 0.1);
+}
+
+#b_servi:hover:before {
+    bottom: 0;
+}
+
+/*----*/
+
+/*Fin Sección efectos botones*/
+footer {
+    padding: 10px;
+    text-align: center;
+}
+#b_reporte{
+    width: 250px;
+    height: 50px;
+
+}
+/*Ajustes responsivos*/
+@media (min-width: 768px) {
+
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .btn-toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-content: flex-start;
+    }
+
+    .btn-group {
+        width: auto;
+        margin-top: 10px;
+        margin: 10px;
+    }
+
+
+    #h {
+        margin-bottom: 50px;
+    }
+
+    #b_usuario,
+    #b_asis,
+    #b_ficha,
+    #b_servi {
+        margin-top: 100px;
+    }
+}

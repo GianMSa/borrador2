@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="{% static 'css\ficha_lista.css' %}">
+</head>
+
+<body>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <header id="h" style="padding: 10px;">
+        <div id="b_home">
+            <button class='bx bxs-home bx-md' style="color: #191919; background-color: transparent; border-color: transparent;"></button>
+        </div>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn bx bxs-user-rectangle"></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#home">Información 1</a>
+                <a href="#about">Informacion 2</a>
+                <a href="#contact" id="c_s">
+                    <i class='bx bx-log-out bx-sm' style="margin-right: 12px;">
+                        </i>Cerrar Sesión</a>
+            </div>
+    </header> 
+    <br>
+    <h1 id="titulo">Fichas</h1>
+    <hr id="linea">
+
+    <div class="container mt-5" style="display: flex; justify-content: center;">
+        <div class="row">
+            <div class="card-sm-3" id="tres">
+                <div class="card d-flex flex-column">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Jose Perez Martiz Ulloa</h5>
+                        <hr style="width: 25%; margin: auto;">
+                        <div class="card-text">
+                            <p>R.U.T</p>
+                            <p>Genero</p>
+                            </div>
+                            <hr>
+                        <div class="mt-auto d-flex justify-content-center" id="b_ir_ficha">
+                        <a href="#" class="btn btn-primary" >Ver Ficha</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-sm-3" id="tres">
+                <div class="card d-flex flex-column">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Jose Perez Martiz Ulloa</h5>
+                        <hr style="width: 25%; margin: auto;">
+                        <div class="card-text">
+                            <p>R.U.T</p>
+                            <p>Genero</p>
+                            </div>
+                            <hr>
+                        <div class="mt-auto d-flex justify-content-center" id="b_ir_ficha">
+                        <a href="#" class="btn btn-primary" >Ver Ficha</a></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card-sm-3" id="tres">
+                <div class="card d-flex flex-column">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Jose Perez Martiz Ulloa</h5>
+                        <hr style="width: 25%; margin: auto;">
+                        <div class="card-text">
+                            <p>R.U.T</p>
+                            <p>Genero</p>
+                            </div>
+                            <hr>
+                        <div class="mt-auto d-flex justify-content-center" id="b_ir_ficha">
+                        <a href="#" class="btn btn-primary" >Ver Ficha</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-sm-3" id="tres">
+                <div class="card d-flex flex-column">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Jose Perez Martiz Ulloa</h5>
+                        <hr style="width: 25%; margin: auto;">
+                        <div class="card-text">
+                            <p>R.U.T</p>
+                            <p>Genero</p>
+                            </div>
+                            <hr>
+                        <div class="mt-auto d-flex justify-content-center" id="b_ir_ficha">
+                        <a href="#" class="btn btn-primary" >Ver Ficha</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-sm-3" id="tres">
+                <div class="card d-flex flex-column">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Jose Perez Martiz Ulloa</h5>
+                        <hr style="width: 25%; margin: auto;">
+                        <div class="card-text">
+                            <p>R.U.T</p>
+                            <p>Genero</p>
+                            </div>
+                            <hr>
+                        <div class="mt-auto d-flex justify-content-center" id="b_ir_ficha">
+                        <a href="#" class="btn btn-primary" >Ver Ficha</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sm-3" id="tres">
+                <div class="card d-flex flex-column">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Jose Perez Martiz Ulloa</h5>
+                        <hr style="width: 25%; margin: auto;">
+                        <div class="card-text">
+                            <p>R.U.T</p>
+                            <p>Genero</p>
+                            </div>
+                            <hr>
+                        <div class="mt-auto d-flex justify-content-center" id="b_ir_ficha">
+                        <a href="#" class="btn btn-primary" >Ver Ficha</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sm-3" id="tres">
+                <div class="card d-flex flex-column">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Jose Perez Martiz Ulloa</h5>
+                        <hr style="width: 25%; margin: auto;">
+                        <div class="card-text">
+                            <p>R.U.T</p>
+                            <p>Genero</p>
+                            </div>
+                            <hr>
+                        <div class="mt-auto d-flex justify-content-center" id="b_ir_ficha">
+                        <a href="#" class="btn btn-primary" >Ver Ficha</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
